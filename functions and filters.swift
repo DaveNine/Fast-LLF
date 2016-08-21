@@ -34,9 +34,9 @@ class AbsoluteDifference: CIFilter
 
 class DifferenceAFilter : CIFilter
 {
-    var inputImage1 : CIImage?  //Initializes input
+    var inputImage1 : CIImage?
     var discrete : CGFloat?
-    var kernel = CIColorKernel(string:  //The actual custom kernel code
+    var kernel = CIColorKernel(string:
         "kernel vec4 Difference(__sample image1,float discrete)" +
             "{" +
             "float diff = image1.r - discrete;" +
@@ -62,9 +62,9 @@ class DifferenceAFilter : CIFilter
 
 class DifferenceBFilter : CIFilter
 {
-    var inputImage1 : CIImage?  //Initializes input
+    var inputImage1 : CIImage?
     var inputImage2 : CIImage?
-    var kernel = CIColorKernel(string:  //The actual custom kernel code
+    var kernel = CIColorKernel(string:
         "kernel vec4 Difference(__sample image1,__sample image2)" +
             "{" +
             "float diff = image1.r - image2.r;" +
@@ -93,10 +93,9 @@ class DifferenceBFilter : CIFilter
 
 class GrayScaleFilter: CIFilter
 {
-    //initialize inputs
+    
     var inputImage: CIImage?
     
-    //Write the Custome Color Kernel
     let GrayScaleKernel = CIColorKernel(string:
         "kernel vec4 grayFilter(__sample pixel)                        " +
             "{                                                              " +
@@ -156,33 +155,32 @@ class GreyscaleRGBRatioFilter : CIFilter{
 
 class LLFRemapFilter: CIFilter
 {
-    var inputImage : CIImage?  //Initializes input
+    var inputImage : CIImage?
     var discrete : CGFloat?
     var sigma_r: CGFloat?
     var alpha: CGFloat?
     var beta: CGFloat?
     
-    var kernel = CIColorKernel(string:  //The actual custom kernel code
+    var kernel = CIColorKernel(string:
         "   kernel vec4 colorRemap(__sample inputIm,float discrete,float sigma_r,float alpha,float beta)" +
             "{" +
             "float NL = 0.01;" +
             "float P = inputIm.r;" +
             "float diff = P - discrete;" +
-            /////////////////////////////////////////////////////////////////////
             "float d = abs(diff)/sigma_r;" +
-            /////////////////////////////////////////////////////////////////////smooth step
+            
             "float xmin = NL;" +
             "float xmax = 2.0*NL;" +
             "float x = d*sigma_r;" +
             "float y = clamp((x - xmin)/(xmax - xmin),0.0,1.0);" +
             "float tau = pow(y,2.0)*pow(y-2.0,2.0);" +
             "float fd = (alpha < 1.0) ? (tau*pow(d,alpha) + (1.0-tau)*d) : pow(d,alpha);" +
-            ///////////////////////////////////////////////////////////////////rd
+            
             "float rd = discrete + sign(diff)*sigma_r*(fd);" +
-            /////////////////////////////////////////fe
+            
             "float a = abs(diff) - sigma_r;" +
             "float fe = beta*a;" +
-            ////////////////////////////////////////re
+            
             "float re = discrete + sign(diff)*(fe + sigma_r);" +
             "float isedge = step(sigma_r,abs(diff));" +
             "float isnotedge = step(abs(diff),sigma_r);" +
@@ -206,9 +204,7 @@ class LLFRemapFilter: CIFilter
             let extent = inputImage.extent
             let arguments = [inputImage,discrete,sigma_r,alpha,beta]
             return kernel.applyWithExtent(extent,arguments: arguments)
-            
-        
-        
+
     }
     
 }
@@ -387,9 +383,9 @@ class SampleRemapFilter : CIFilter
 
 class SumOfImagesFilter: CIFilter
 {
-    var inputImage1 : CIImage?  //Initializes input
+    var inputImage1 : CIImage?
     var inputImage2 : CIImage?
-    var kernel = CIColorKernel(string:  //The actual custom kernel code
+    var kernel = CIColorKernel(string:  
         "kernel vec4 Sum(__sample image1,__sample image2)" +
             "       {                                        " +
             "return vec4(vec3(image1.r + image2.r),1.0);" +
