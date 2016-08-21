@@ -203,15 +203,8 @@ class LLFRemapFilter: CIFilter
         {
             return nil
         }
-        
-            
-            
-            //apply to whole image
             let extent = inputImage.extent
-            //arguments of the kernel
             let arguments = [inputImage,discrete,sigma_r,alpha,beta]
-            
-            //return the rectangle that defines the part of the image that CI needs to render rect in the output
             return kernel.applyWithExtent(extent,arguments: arguments)
             
         
