@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //Initialization
-        //let downscaled = resampleImage(OriginalImage, sizeX: OriginalImage.extent.width/2, sizeY: OriginalImage.extent.height/2)
+        //let downscaled = resampleImage(OriginalImage, sizeX: OriginalImage.extent.width/2, sizeY: OriginalImage.extent.height/2) //might need to downscale to screen size?
         
         let grayInput = GrayScale(OriginalImage)
         let ratio = RGBRatio(OriginalImage, GrayImage: grayInput)
@@ -31,12 +31,12 @@ class ViewController: UIViewController {
         let outGray = FastLocalLaplacianFilter(grayInput, mapName: "LLF", MappingArgs: [0.3,0.25,1.0], numDiscrete: 20, numLevels:5)
         let endAlgo = NSDate()
         let intervalAlgo = endAlgo.timeIntervalSinceDate(beginAlgo)
-        print("Algorithm took \(intervalAlgo) seconds.")
+        print("Algorithm took \(intervalAlgo) seconds to run.")
         
         let out = Multiply2(outGray, imageTwo: ratio)
         //Draw output
         view.addSubview(imageView)
-        imageView.image = out
+        imageView.image = out //How to time it takes to render to screen? o_O
 
     }
     
