@@ -1,4 +1,4 @@
 # Fast-LLF
 Fast Local Laplacian Filters for iOS
 
-An attempt to implement Fast Local Laplacian Filters for iOS through Swift.
+An implementation of Fast Local Laplacian Filters for iOS through Swift and custom Core Image filters.
