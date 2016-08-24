@@ -128,6 +128,20 @@ func DifferenceB(imageOne:CIImage,imageTwo:CIImage) -> CIImage
     
 }
 
+// FirstThird: This combines the first and third multiplied term in the FLLF algorithm.
+// Inputs : image: Presumably a gaussian level image.
+//          discrete: a sampled gaussian coefficient.
+//          threshold: a threshold provided constant.
+// Outputs : CIImage
+func FirstThird(image: CIImage, discrete: CGFloat, threshold: CGFloat) -> CIImage
+{
+    let filter = FirstThirdTermFilter()
+    filter.inputImage = image
+    filter.discrete = discrete
+    filter.threshold = threshold
+    return filter.outputImage
+}
+
 // LevelDimensions: Saves the sizes of the images in the pyramid at all levels, for reference.
 // Inputs : image: The image that the pyramid is being computed from.
 //          levels: The number of levels in the pyramid

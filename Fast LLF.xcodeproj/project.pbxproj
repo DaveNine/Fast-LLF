@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F639DC8D1D6D604E00635FDD /* asdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = F639DC8C1D6D604E00635FDD /* asdf.swift */; };
+		F639DC8F1D6D716E00635FDD /* symflower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F639DC8E1D6D716E00635FDD /* symflower.jpg */; };
+		F639DC931D6D751D00635FDD /* symflower-down.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F639DC921D6D751D00635FDD /* symflower-down.jpeg */; };
 		F666BCD71D69ACFE008AEC60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCD61D69ACFE008AEC60 /* AppDelegate.swift */; };
 		F666BCDC1D69ACFE008AEC60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F666BCDA1D69ACFE008AEC60 /* Main.storyboard */; };
 		F666BCDE1D69ACFE008AEC60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F666BCDD1D69ACFE008AEC60 /* Assets.xcassets */; };
 		F666BCE11D69ACFE008AEC60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F666BCDF1D69ACFE008AEC60 /* LaunchScreen.storyboard */; };
 		F666BCEC1D69AD25008AEC60 /* functions and filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCE81D69AD25008AEC60 /* functions and filters.swift */; };
 		F666BCED1D69AD25008AEC60 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCE91D69AD25008AEC60 /* Functions.swift */; };
-		F666BCEE1D69AD25008AEC60 /* TestFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCEA1D69AD25008AEC60 /* TestFilters.swift */; };
 		F666BCEF1D69AD25008AEC60 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCEB1D69AD25008AEC60 /* ImageView.swift */; };
 		F666BCF21D69AE4C008AEC60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F666BCF11D69AE4C008AEC60 /* ViewController.swift */; };
 		F666BCF41D69AE65008AEC60 /* flower.png in Resources */ = {isa = PBXBuildFile; fileRef = F666BCF31D69AE65008AEC60 /* flower.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F639DC8C1D6D604E00635FDD /* asdf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = asdf.swift; sourceTree = "<group>"; };
+		F639DC8E1D6D716E00635FDD /* symflower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symflower.jpg; sourceTree = "<group>"; };
+		F639DC921D6D751D00635FDD /* symflower-down.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symflower-down.jpeg"; sourceTree = "<group>"; };
 		F666BCD31D69ACFE008AEC60 /* Fast LLF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fast LLF.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F666BCD61D69ACFE008AEC60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F666BCDB1D69ACFE008AEC60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,7 +33,6 @@
 		F666BCE21D69ACFE008AEC60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F666BCE81D69AD25008AEC60 /* functions and filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "functions and filters.swift"; sourceTree = "<group>"; };
 		F666BCE91D69AD25008AEC60 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
-		F666BCEA1D69AD25008AEC60 /* TestFilters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFilters.swift; sourceTree = "<group>"; };
 		F666BCEB1D69AD25008AEC60 /* ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageView.swift; path = ../ImageView.swift; sourceTree = "<group>"; };
 		F666BCF11D69AE4C008AEC60 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F666BCF31D69AE65008AEC60 /* flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flower.png; sourceTree = "<group>"; };
@@ -68,10 +72,13 @@
 				F666BCD61D69ACFE008AEC60 /* AppDelegate.swift */,
 				F666BCF11D69AE4C008AEC60 /* ViewController.swift */,
 				F666BCDA1D69ACFE008AEC60 /* Main.storyboard */,
+				F639DC8C1D6D604E00635FDD /* asdf.swift */,
 				F666BCDD1D69ACFE008AEC60 /* Assets.xcassets */,
 				F666BCDF1D69ACFE008AEC60 /* LaunchScreen.storyboard */,
 				F666BCE21D69ACFE008AEC60 /* Info.plist */,
 				F666BCEB1D69AD25008AEC60 /* ImageView.swift */,
+				F639DC8E1D6D716E00635FDD /* symflower.jpg */,
+				F639DC921D6D751D00635FDD /* symflower-down.jpeg */,
 				F666BCF31D69AE65008AEC60 /* flower.png */,
 			);
 			path = "Fast LLF";
@@ -82,7 +89,6 @@
 			children = (
 				F666BCE81D69AD25008AEC60 /* functions and filters.swift */,
 				F666BCE91D69AD25008AEC60 /* Functions.swift */,
-				F666BCEA1D69AD25008AEC60 /* TestFilters.swift */,
 			);
 			name = "Custom Filters & Functions";
 			path = ..;
@@ -147,8 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F639DC8F1D6D716E00635FDD /* symflower.jpg in Resources */,
 				F666BCF41D69AE65008AEC60 /* flower.png in Resources */,
 				F666BCE11D69ACFE008AEC60 /* LaunchScreen.storyboard in Resources */,
+				F639DC931D6D751D00635FDD /* symflower-down.jpeg in Resources */,
 				F666BCDE1D69ACFE008AEC60 /* Assets.xcassets in Resources */,
 				F666BCDC1D69ACFE008AEC60 /* Main.storyboard in Resources */,
 			);
@@ -165,8 +173,8 @@
 				F666BCEF1D69AD25008AEC60 /* ImageView.swift in Sources */,
 				F666BCEC1D69AD25008AEC60 /* functions and filters.swift in Sources */,
 				F666BCD71D69ACFE008AEC60 /* AppDelegate.swift in Sources */,
-				F666BCEE1D69AD25008AEC60 /* TestFilters.swift in Sources */,
 				F666BCED1D69AD25008AEC60 /* Functions.swift in Sources */,
+				F639DC8D1D6D604E00635FDD /* asdf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +324,7 @@
 				F666BCE71D69ACFE008AEC60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
